@@ -32,7 +32,7 @@ export default function Home() {
             whoami
           </Heading>
           <Text>
-            Undergraduate senior Electrical Engineering student at The Cooper Union pursuing combined 4-year Master's of Engineering and Bachelor's of Engineering. Currently doing my M.Engg. thesis on designing a low-cost 3D human pose estimation algorithm motivated from Google's <Link color="teal.300" href="https://google.github.io/mediapipe/solutions/pose.html">Blazepose</Link>. Invested in researching ASIC architectures for accelerating deep neural networks (DNN), espceially in computer vision. Moreover, interested in designing low-power DNN algorithms while maintaining competitive accuracy against state-of-the-art.
+            Undergraduate senior Electrical Engineering student at The Cooper Union pursuing combined 4-year Master\'s of Engineering and Bachelor\'s of Engineering. Currently doing my M.Engg. thesis on designing a low-cost 3D human pose estimation algorithm motivated from Google's <Link color="teal.300" href="https://google.github.io/mediapipe/solutions/pose.html">Blazepose</Link>. Invested in researching ASIC architectures for accelerating deep neural networks (DNN), espceially in computer vision. Moreover, interested in designing low-power DNN algorithms while maintaining competitive accuracy against state-of-the-art.
           </Text>
 
 
@@ -57,6 +57,7 @@ export default function Home() {
                   <Image
                     src="nist_research.jpg"
                     pt="5"
+                    alt="NIST Research"
                   />
                   <Stack>
                     <CardBody bg="gray.300" fontFamily="consolas">
@@ -82,6 +83,7 @@ export default function Home() {
                   <Image
                     src="https://pimages.toolbox.com/wp-content/uploads/2022/05/18113202/The-Architecture-of-a-Neural-Network.png"
                     pt="5"
+                    alt="DNN Demo Pic"
                   />
                   <Stack>
                     <CardBody bg="gray.300" fontFamily="consolas">
@@ -107,6 +109,7 @@ export default function Home() {
                   <Image
                     src="EM_algo.png"
                     pt="5"
+                    alt="Bayesian ML Demo Pic"
                   />
                   <Stack>
                     <CardBody bg="gray.300" fontFamily="consolas">
@@ -132,6 +135,7 @@ export default function Home() {
                   <Image
                     src="https://www.freecodecamp.org/news/content/images/2020/09/image-21.png"
                     pt="5"
+                    alt="DSA Demo Pic"
                   />
                   <Stack>
                     <CardBody bg="gray.300" fontFamily="consolas">
@@ -141,7 +145,7 @@ export default function Home() {
                         </LinkOverlay>
                       </Heading>
                       <Text fontSize="16px">
-                        Implemented various data structures in C++ such as hash tables, heaps, Djikstra's algorithm, and dynamic programming.
+                        Implemented various data structures in C++ such as hash tables, heaps, Djikstra\'s algorithm, and dynamic programming.
                       </Text>
                     </CardBody>
                   </Stack>
@@ -160,6 +164,7 @@ export default function Home() {
                   <Image
                     src="final_layout.png"
                     pt="5"
+                    alt="Layout Pic"
                   />
                   <Stack>
                     <CardBody bg="gray.300" fontFamily="consolas">
@@ -185,6 +190,7 @@ export default function Home() {
                   <Image
                     src="vit_model.png"
                     pt="5"
+                    alt="Custom Probed ViT Model Pic"
                   />
                   <Stack>
                     <CardBody bg="gray.300" fontFamily="consolas">
@@ -215,6 +221,7 @@ export default function Home() {
                   <Image
                     src="RepresentativeImage.jpg"
                     pt="5"
+                    alt="Computer Animation Research Poster Pic"
                   />
                   <Stack>
                     <CardBody bg="gray.300" fontFamily="consolas">
@@ -240,6 +247,7 @@ export default function Home() {
                   <Image
                     src="https://media.istockphoto.com/id/1216376755/vector/compiler-concept-icon-software-development-machine-language-programming-data-filtering.jpg?s=612x612&w=0&k=20&c=MbSJrIayiUkVlYlD71StWsBayeOny8eKGAYncHHc7rQ="
                     pt="5"
+                    alt="Compiler Sample Pic"
                   />
                   <Stack>
                     <CardBody bg="gray.300" fontFamily="consolas">

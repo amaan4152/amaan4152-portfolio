@@ -68,6 +68,7 @@ export default function Layout({ children, ...extraMeta }) {
                                 borderRadius='full'
                                 width="100%"
                                 height="100%"
+                                alt="self-portrait pic"
                             />
                         </Container>
                         <Container
@@ -85,7 +86,7 @@ export default function Layout({ children, ...extraMeta }) {
                         >
                             <Text>
                                 The Cooper Union
-                                M.Engg. & B.E. in EE '23
+                                M.Engg. & B.E. in EE \'23
                             </Text>
 
                         </Container>
@@ -138,13 +139,13 @@ export default function Layout({ children, ...extraMeta }) {
                                             <Th>
                                                 <HStack>
                                                     <Text>Software</Text>
-                                                    <Image w="10%" src="programming.png" />
+                                                    <Image w="10%" src="programming.png" alt="software icon" />
                                                 </HStack>
                                             </Th>
                                             <Th>
                                                 <HStack>
                                                     <Text>Hardware</Text>
-                                                    <Image w="10%" src="hw_icon.png" />
+                                                    <Image w="10%" src="hw_icon.png" alt="hardware icon " />
                                                 </HStack>
                                             </Th>
                                         </Tr>
