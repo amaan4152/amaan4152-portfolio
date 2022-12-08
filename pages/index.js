@@ -32,7 +32,7 @@ export default function Home() {
             whoami
           </Heading>
           <Text>
-            Undergraduate senior Electrical Engineering student at The Cooper Union pursuing combined 4-year Master\'s of Engineering and Bachelor\'s of Engineering. Currently doing my M.Engg. thesis on designing a low-cost 3D human pose estimation algorithm motivated from Google's <Link color="teal.300" href="https://google.github.io/mediapipe/solutions/pose.html">Blazepose</Link>. Invested in researching ASIC architectures for accelerating deep neural networks (DNN), espceially in computer vision. Moreover, interested in designing low-power DNN algorithms while maintaining competitive accuracy against state-of-the-art.
+            Undergraduate senior Electrical Engineering student at The Cooper Union pursuing combined 4-year Master's of Engineering and Bachelor's of Engineering. Currently doing my M.Engg. thesis on designing a low-cost 3D human pose estimation algorithm motivated from Google's <Link color="teal.300" href="https://google.github.io/mediapipe/solutions/pose.html">Blazepose</Link>. Invested in researching ASIC architectures for accelerating deep neural networks (DNN), espceially in computer vision. Moreover, interested in designing low-power DNN algorithms while maintaining competitive accuracy against state-of-the-art.
           </Text>
 
 
@@ -145,7 +145,7 @@ export default function Home() {
                         </LinkOverlay>
                       </Heading>
                       <Text fontSize="16px">
-                        Implemented various data structures in C++ such as hash tables, heaps, Djikstra\'s algorithm, and dynamic programming.
+                        Implemented various data structures in C++ such as hash tables, heaps, Djikstra's algorithm, and dynamic programming.
                       </Text>
                     </CardBody>
                   </Stack>

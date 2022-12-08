@@ -86,7 +86,7 @@ export default function Layout({ children, ...extraMeta }) {
                         >
                             <Text>
                                 The Cooper Union
-                                M.Engg. & B.E. in EE \'23
+                                M.Engg. & B.E. in EE '23
                             </Text>
 
                         </Container>
