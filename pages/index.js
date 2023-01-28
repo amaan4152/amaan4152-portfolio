@@ -1,24 +1,20 @@
 import Layout from "../components/Layout";
 import {
-  Box,
   Card,
   CardBody,
-  Container,
   Heading,
   Image,
   Link,
   HStack,
   Stack,
   VStack,
-  Wrap,
-  CardHeader,
-  UnorderedList,
-  ListItem,
   Text,
   LinkBox,
   LinkOverlay,
   Center
 } from "@chakra-ui/react"
+import { motion } from 'framer-motion'
+
 export default function Home() {
   return (
     <Layout>
@@ -42,17 +38,19 @@ export default function Home() {
             pt={5}
             pb={2}
           >
-            ll projects/
+            ls projects/
           </Heading>
 
-          <HStack>
+          <HStack maxW="container.xl" width="100%">
             <VStack>
               <LinkBox as='article' maxW='sm' p='5'>
                 <Card
+                  as={motion.div}
                   w="100%"
                   h="100%"
                   shadow="xl"
                   overflow='hidden'
+                  whileHover={{ scale: 1.03 }}
                 >
                   <Image
                     src="nist_research.jpg"
@@ -75,117 +73,12 @@ export default function Home() {
               </LinkBox>
               <LinkBox as='article' maxW='sm' p='5'>
                 <Card
+                  as={motion.div}
                   w="100%"
                   h="100%"
                   shadow="xl"
                   overflow='hidden'
-                >
-                  <Image
-                    src="https://pimages.toolbox.com/wp-content/uploads/2022/05/18113202/The-Architecture-of-a-Neural-Network.png"
-                    pt="5"
-                    alt="DNN Demo Pic"
-                  />
-                  <Stack>
-                    <CardBody bg="gray.300" fontFamily="consolas">
-                      <Heading size='md' fontFamily="consolas">
-                        <LinkOverlay href="https://github.com/amaan4152/ECE472-DeepLearning" target="_blank" rel="noopener noreferrer">
-                          Deep Learning Projects
-                        </LinkOverlay>
-                      </Heading>
-                      <Text fontSize="16px">
-                        Developed multilayer perceptrons (MLP), Convolutional Neural Networks (CNN), residual networks, and transformers with Tensorflow.
-                      </Text>
-                    </CardBody>
-                  </Stack>
-                </Card>
-              </LinkBox>
-              <LinkBox as='article' maxW='sm' p='5'>
-                <Card
-                  w="100%"
-                  h="100%"
-                  shadow="xl"
-                  overflow='hidden'
-                >
-                  <Image
-                    src="EM_algo.png"
-                    pt="5"
-                    alt="Bayesian ML Demo Pic"
-                  />
-                  <Stack>
-                    <CardBody bg="gray.300" fontFamily="consolas">
-                      <Heading size='md' fontFamily="consolas">
-                        <LinkOverlay href="https://github.com/amaan4152/ECE474-BayesianML" target="_blank" rel="noopener noreferrer">
-                          Bayesian Machine Learning Projects
-                        </LinkOverlay>
-                      </Heading>
-                      <Text fontSize="16px">
-                        Various projects implemented Bayesion machine learning algorithms and techniques such as kernel methods, Expextation-Maximization, Monte Carlo Markov Chain.
-                      </Text>
-                    </CardBody>
-                  </Stack>
-                </Card>
-              </LinkBox>
-              <LinkBox as='article' maxW='sm' p='5'>
-                <Card
-                  w="100%"
-                  h="100%"
-                  shadow="xl"
-                  overflow='hidden'
-                >
-                  <Image
-                    src="https://www.freecodecamp.org/news/content/images/2020/09/image-21.png"
-                    pt="5"
-                    alt="DSA Demo Pic"
-                  />
-                  <Stack>
-                    <CardBody bg="gray.300" fontFamily="consolas">
-                      <Heading size='md' fontFamily="consolas">
-                        <LinkOverlay href="https://github.com/amaan4152/ECE365-DSA_II" target="_blank" rel="noopener noreferrer">
-                          Data Structures & Algorithms II Projects
-                        </LinkOverlay>
-                      </Heading>
-                      <Text fontSize="16px">
-                        Implemented various data structures in C++ such as hash tables, heaps, Djikstra's algorithm, and dynamic programming.
-                      </Text>
-                    </CardBody>
-                  </Stack>
-                </Card>
-              </LinkBox>
-            </VStack>
-
-            <VStack>
-              <LinkBox as='article' maxW='sm' p='5'>
-                <Card
-                  w="100%"
-                  h="100%"
-                  shadow="xl"
-                  overflow='hidden'
-                >
-                  <Image
-                    src="final_layout.png"
-                    pt="5"
-                    alt="Layout Pic"
-                  />
-                  <Stack>
-                    <CardBody bg="gray.300" fontFamily="consolas">
-                      <Heading size='md' fontFamily="consolas">
-                        <LinkOverlay href="https://github.com/amaan4152/DVLSI-8bit-counter" target="_blank" rel="noopener noreferrer">
-                          8-bit Counter
-                        </LinkOverlay>
-                      </Heading>
-                      <Text fontSize="16px">
-                        Developed 8-bit counter with Verilog. Synthesized counter with DC Compiler; designed floorplan and placement, clock, routing optimizations with IC Compiler II; passed DRC and LVS checks.
-                      </Text>
-                    </CardBody>
-                  </Stack>
-                </Card>
-              </LinkBox>
-              <LinkBox as='article' maxW='sm' p='5'>
-                <Card
-                  w="100%"
-                  h="100%"
-                  shadow="xl"
-                  overflow='hidden'
+                  whileHover={{ scale: 1.03 }}
                 >
                   <Image
                     src="vit_model.png"
@@ -211,12 +104,17 @@ export default function Home() {
                   </Stack>
                 </Card>
               </LinkBox>
+            </VStack>
+
+            <VStack>
               <LinkBox as='article' maxW='sm' p='5'>
                 <Card
+                  as={motion.div}
                   w="100%"
                   h="100%"
                   shadow="xl"
                   overflow='hidden'
+                  whileHover={{ scale: 1.03 }}
                 >
                   <Image
                     src="RepresentativeImage.jpg"
@@ -239,10 +137,127 @@ export default function Home() {
               </LinkBox>
               <LinkBox as='article' maxW='sm' p='5'>
                 <Card
+                  as={motion.div}
                   w="100%"
                   h="100%"
                   shadow="xl"
                   overflow='hidden'
+                  whileHover={{ scale: 1.03 }}
+                >
+                  <Image
+                    src="https://pimages.toolbox.com/wp-content/uploads/2022/05/18113202/The-Architecture-of-a-Neural-Network.png"
+                    pt="5"
+                    alt="DNN Demo Pic"
+                  />
+                  <Stack>
+                    <CardBody bg="gray.300" fontFamily="consolas">
+                      <Heading size='md' fontFamily="consolas">
+                        <LinkOverlay href="https://github.com/amaan4152/ECE472-DeepLearning" target="_blank" rel="noopener noreferrer">
+                          Deep Learning Projects
+                        </LinkOverlay>
+                      </Heading>
+                      <Text fontSize="16px">
+                        Developed multilayer perceptrons (MLP), Convolutional Neural Networks (CNN), residual networks, and transformers with Tensorflow.
+                      </Text>
+                    </CardBody>
+                  </Stack>
+                </Card>
+              </LinkBox>
+              <LinkBox as='article' maxW='sm' p='5'>
+                <Card
+                  as={motion.div}
+                  w="100%"
+                  h="100%"
+                  shadow="xl"
+                  overflow='hidden'
+                  whileHover={{ scale: 1.03 }}
+                >
+                  <Image
+                    src="EM_algo.png"
+                    pt="5"
+                    alt="Bayesian ML Demo Pic"
+                  />
+                  <Stack>
+                    <CardBody bg="gray.300" fontFamily="consolas">
+                      <Heading size='md' fontFamily="consolas">
+                        <LinkOverlay href="https://github.com/amaan4152/ECE474-BayesianML" target="_blank" rel="noopener noreferrer">
+                          Bayesian Machine Learning Projects
+                        </LinkOverlay>
+                      </Heading>
+                      <Text fontSize="16px">
+                        Various projects implemented Bayesion machine learning algorithms and techniques such as kernel methods, Expextation-Maximization, Monte Carlo Markov Chain.
+                      </Text>
+                    </CardBody>
+                  </Stack>
+                </Card>
+              </LinkBox>
+              <LinkBox as='article' maxW='sm' p='5'>
+                <Card
+                  as={motion.div}
+                  w="100%"
+                  h="100%"
+                  shadow="xl"
+                  overflow='hidden'
+                  whileHover={{ scale: 1.03 }}
+                >
+                  <Image
+                    src="https://www.freecodecamp.org/news/content/images/2020/09/image-21.png"
+                    pt="5"
+                    alt="DSA Demo Pic"
+                  />
+                  <Stack>
+                    <CardBody bg="gray.300" fontFamily="consolas">
+                      <Heading size='md' fontFamily="consolas">
+                        <LinkOverlay href="https://github.com/amaan4152/ECE365-DSA_II" target="_blank" rel="noopener noreferrer">
+                          Data Structures & Algorithms II Projects
+                        </LinkOverlay>
+                      </Heading>
+                      <Text fontSize="16px">
+                        Implemented various data structures in C++ such as hash tables, heaps, Djikstra's algorithm, and dynamic programming.
+                      </Text>
+                    </CardBody>
+                  </Stack>
+                </Card>
+              </LinkBox>
+            </VStack>
+
+            <VStack>
+              <LinkBox as='article' maxW='sm' p='5'>
+                <Card
+                  as={motion.div}
+                  w="100%"
+                  h="100%"
+                  shadow="xl"
+                  overflow='hidden'
+                  whileHover={{ scale: 1.03 }}
+                >
+                  <Image
+                    src="final_layout.png"
+                    pt="5"
+                    alt="Layout Pic"
+                  />
+                  <Stack>
+                    <CardBody bg="gray.300" fontFamily="consolas">
+                      <Heading size='md' fontFamily="consolas">
+                        <LinkOverlay href="https://github.com/amaan4152/DVLSI-8bit-counter" target="_blank" rel="noopener noreferrer">
+                          8-bit Counter
+                        </LinkOverlay>
+                      </Heading>
+                      <Text fontSize="16px">
+                        Developed 8-bit counter with Verilog. Synthesized counter with DC Compiler; designed floorplan and placement, clock, routing optimizations with IC Compiler II; passed DRC and LVS checks.
+                      </Text>
+                    </CardBody>
+                  </Stack>
+                </Card>
+              </LinkBox>
+              <LinkBox as='article' maxW='sm' p='5'>
+                <Card
+                  as={motion.div}
+                  w="100%"
+                  h="100%"
+                  shadow="xl"
+                  overflow='hidden'
+                  whileHover={{ scale: 1.03 }}
                 >
                   <Image
                     src="https://media.istockphoto.com/id/1216376755/vector/compiler-concept-icon-software-development-machine-language-programming-data-filtering.jpg?s=612x612&w=0&k=20&c=MbSJrIayiUkVlYlD71StWsBayeOny8eKGAYncHHc7rQ="

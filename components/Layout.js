@@ -22,6 +22,7 @@ import {
     Text,
     Flex
 } from '@chakra-ui/react'
+import { motion } from 'framer-motion'
 import { GoMarkGithub, GoMail } from 'react-icons/go'
 import { FaLinkedin } from 'react-icons/fa'
 
@@ -53,10 +54,9 @@ export default function Layout({ children, ...extraMeta }) {
             </Head>
             <main>
                 <Center>
-                    <VStack>
+                    <VStack width="75%">
                         <Container
-                            maxW="container.md"
-                            width="23%"
+                            width="20%"
                             height="23%"
                             display="inline-block"
                             borderStyle="solid"
@@ -86,12 +86,16 @@ export default function Layout({ children, ...extraMeta }) {
                         >
                             <Text>
                                 The Cooper Union
-                                M.Engg. & B.E. in EE '23
+                                M.Eng. & B.E. in EE '23
                             </Text>
 
                         </Container>
                         <HStack>
-                            <Container pr={3}>
+                            <Container
+                                as={motion.div}
+                                pr={3}
+                                whileHover={{ scale: 1.15 }}
+                            >
                                 <Link
                                     href="https://github.com/amaan4152"
                                     borderRadius="full"
@@ -99,7 +103,10 @@ export default function Layout({ children, ...extraMeta }) {
                                     <Icon as={GoMarkGithub} boxSize={6} />
                                 </Link>
                             </Container>
-                            <Container>
+                            <Container
+                                as={motion.div}
+                                whileHover={{ scale: 1.15 }}
+                            >
                                 <Link
                                     href="mailto: amaan.rahman@cooper.edu"
                                     borderRadius="full"
@@ -108,7 +115,10 @@ export default function Layout({ children, ...extraMeta }) {
                                     <Icon as={GoMail} boxSize={8} />
                                 </Link>
                             </Container>
-                            <Container>
+                            <Container
+                                as={motion.div}
+                                whileHover={{ scale: 1.15 }}
+                            >
                                 <Link
                                     href="https://www.linkedin.com/in/amaan-rahman-340a3a181"
                                     borderRadius="full"
@@ -119,7 +129,8 @@ export default function Layout({ children, ...extraMeta }) {
                         </HStack>
                         <Divider pt={5} borderColor="black" />
                         <Container
-                            maxW="container.lg"
+                            maxW="container.xl"
+                            width="100%"
                             pt={5}
                         >
                             {children}
@@ -131,53 +142,77 @@ export default function Layout({ children, ...extraMeta }) {
                         >
                             ls skills/
                         </Heading>
-                        <Container pb={5}>
+                        <Container pb={5} maxW="container.xl" width="100%">
                             <TableContainer>
                                 <Table variant='simple'>
                                     <Thead>
                                         <Tr>
                                             <Th>
                                                 <HStack>
-                                                    <Text>Software</Text>
-                                                    <Image w="10%" src="programming.png" alt="software icon" />
+                                                    <Text>Software Languages/Tools</Text>
+                                                    <Image w="5%" src="programming.png" alt="software icon" />
                                                 </HStack>
                                             </Th>
                                             <Th>
                                                 <HStack>
-                                                    <Text>Hardware</Text>
-                                                    <Image w="10%" src="hw_icon.png" alt="hardware icon " />
+                                                    <Text>Libraries</Text>
+                                                    <Image w="6%" src="books.png" alt="library icon " />
                                                 </HStack>
                                             </Th>
+                                            <Th>
+                                                <HStack>
+                                                    <Text>Hardware Languages/Tools</Text>
+                                                    <Image w="5%" src="hw_icon.png" alt="hardware icon " />
+                                                </HStack>
+                                            </Th>
+
                                         </Tr>
                                     </Thead>
                                     <Tbody>
                                         <Tr>
                                             <Td>Python</Td>
+                                            <Td>PyTorch</Td>
                                             <Td>Cadence Virtuoso</Td>
                                         </Tr>
                                         <Tr>
                                             <Td>MATLAB</Td>
+                                            <Td>Tensorflow</Td>
                                             <Td>Synopsis Design Compiler</Td>
                                         </Tr>
                                         <Tr>
-                                            <Td>Verilog/SystemVerilog HDL</Td>
+                                            <Td>C++</Td>
+                                            <Td>OpenCV</Td>
                                             <Td>Synopsys IC Compiler II</Td>
                                         </Tr>
                                         <Tr>
-                                            <Td>C++</Td>
+                                            <Td>C</Td>
+                                            <Td>Pandas</Td>
+                                            <Td>Verilog/SystemVerilog HDL</Td>
+                                        </Tr>
+                                        <Tr>
+                                            <Td>MySQL</Td>
+                                            <Td>Numpy</Td>
+                                            <Td>Tcl</Td>
+                                        </Tr>
+                                        <Tr>
+                                            <Td>JavaScript</Td>
+                                            <Td>MATLAB Communication Toolbox</Td>
                                             <Td>Vivado Design Suite</Td>
                                         </Tr>
                                         <Tr>
-                                            <Td>C</Td>
+                                            <Td>Bash</Td>
+                                            <Td>MATLAB Instrumentation Toolbox</Td>
                                             <Td>LTSpice</Td>
                                         </Tr>
                                         <Tr>
                                             <Td>x86 Assembly</Td>
+                                            <Td>-</Td>
                                             <Td>Zynq 7000 ZedBoard</Td>
                                         </Tr>
                                         <Tr>
-                                            <Td>Bash & Tcl</Td>
-                                            <Td>UNIX/Linux Systems</Td>
+                                            <Td>-</Td>
+                                            <Td>-</Td>
+                                            <Td>Unix/Linux Systems</Td>
                                         </Tr>
                                     </Tbody>
                                 </Table>
