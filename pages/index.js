@@ -244,7 +244,7 @@ export default function Home() {
                         </LinkOverlay>
                       </Heading>
                       <Text fontSize="16px">
-                        Developed interrupt controller with Verilog. Synthesized counter with DC Compiler; designed floorplan and placement, clock, routing optimizations with IC Compiler II; passed DRC checks.
+                        Developed interrupt controller with Verilog. Synthesized with DC Compiler; designed floorplan and placement, clock, routing optimizations with IC Compiler II; passed DRC checks.
                       </Text>
                     </CardBody>
                   </Stack>
