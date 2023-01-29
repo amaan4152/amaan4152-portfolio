@@ -240,7 +240,7 @@ export default function Home() {
                     <CardBody bg="gray.300" fontFamily="consolas">
                       <Heading size='md' fontFamily="consolas">
                         <LinkOverlay href="https://github.com/amaan4152/DVLSI-Interrupt_Controller" target="_blank" rel="noopener noreferrer">
-                          8-bit Counter
+                          Interrupt Controller
                         </LinkOverlay>
                       </Heading>
                       <Text fontSize="16px">
