@@ -232,6 +232,34 @@ export default function Home() {
                   whileHover={{ scale: 1.03 }}
                 >
                   <Image
+                    src="intr_ctrl_layout.png"
+                    pt="5"
+                    alt="Layout Pic"
+                  />
+                  <Stack>
+                    <CardBody bg="gray.300" fontFamily="consolas">
+                      <Heading size='md' fontFamily="consolas">
+                        <LinkOverlay href="https://github.com/amaan4152/DVLSI-Interrupt_Controller" target="_blank" rel="noopener noreferrer">
+                          8-bit Counter
+                        </LinkOverlay>
+                      </Heading>
+                      <Text fontSize="16px">
+                        Developed interrupt controller with Verilog. Synthesized counter with DC Compiler; designed floorplan and placement, clock, routing optimizations with IC Compiler II; passed DRC checks.
+                      </Text>
+                    </CardBody>
+                  </Stack>
+                </Card>
+              </LinkBox>
+              <LinkBox as='article' maxW='sm' p='5'>
+                <Card
+                  as={motion.div}
+                  w="100%"
+                  h="100%"
+                  shadow="xl"
+                  overflow='hidden'
+                  whileHover={{ scale: 1.03 }}
+                >
+                  <Image
                     src="final_layout.png"
                     pt="5"
                     alt="Layout Pic"
