@@ -35,7 +35,7 @@ export default function Layout({ children, ...extraMeta }) {
         title: "Amaan Rahman Portfolio",
         name: "Amaan Rahman",
         github: "https://github.com/amaan4152",
-        description: "Undergraduate Electrical Engineer and Computer Vision researcher @ The Cooper Union. Welcome to my humble abode.",
+        description: "Welcome to my humble abode.",
         ...extraMeta
     }
 
@@ -85,8 +85,7 @@ export default function Layout({ children, ...extraMeta }) {
                             textAlign="center"
                         >
                             <Text>
-                                The Cooper Union
-                                M.Eng. & B.E. in EE '23
+                                Ph.D @ GA Tech in GTCAD Lab
                             </Text>
 
                         </Container>
