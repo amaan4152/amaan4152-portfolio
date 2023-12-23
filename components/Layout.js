@@ -1,8 +1,13 @@
+
 import Head from 'next/head'
 import Navbar from "./Navbar"
 import { useRouter } from 'next/router'
+
+
 import {
     Box,
+    Button,
+    Input,
     Center,
     Container,
     Divider,
@@ -25,6 +30,8 @@ import {
 import { motion } from 'framer-motion'
 import { GoMarkGithub, GoMail } from 'react-icons/go'
 import { FaLinkedin } from 'react-icons/fa'
+
+
 
 // Layout framwork for pages in portfolio
 // ref: https://www.freecodecamp.org/news/how-to-build-a-portfolio-site-with-nextjs-tailwindcss/
@@ -54,7 +61,8 @@ export default function Layout({ children, ...extraMeta }) {
             </Head>
             <main>
                 <Center>
-                    <VStack width="75%">
+                    <VStack width="90%">
+                        <Navbar></Navbar>
                         <Container
                             width="20%"
                             height="23%"
@@ -84,9 +92,10 @@ export default function Layout({ children, ...extraMeta }) {
                             fontSize="16px"
                             textAlign="center"
                         >
-                            <Text>
-                                Ph.D @ GA Tech in GTCAD Lab
-                            </Text>
+                            {'Ph.D at Georgia Intitute of Technology - '}
+                            <Link href="https://gtcad.gatech.edu/" target="_blank" rel="noopener noreferrer">
+                                {'GTCAD Lab'}
+                            </Link>
 
                         </Container>
                         <HStack>
@@ -98,6 +107,8 @@ export default function Layout({ children, ...extraMeta }) {
                                 <Link
                                     href="https://github.com/amaan4152"
                                     borderRadius="full"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                 >
                                     <Icon as={GoMarkGithub} boxSize={6} />
                                 </Link>
@@ -110,6 +121,8 @@ export default function Layout({ children, ...extraMeta }) {
                                     href="mailto: amaan.rahman@cooper.edu"
                                     borderRadius="full"
                                     border="hidden"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                 >
                                     <Icon as={GoMail} boxSize={8} />
                                 </Link>
@@ -121,6 +134,8 @@ export default function Layout({ children, ...extraMeta }) {
                                 <Link
                                     href="https://www.linkedin.com/in/amaan-rahman-340a3a181"
                                     borderRadius="full"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                 >
                                     <Icon as={FaLinkedin} boxSize={7} />
                                 </Link>
@@ -223,6 +238,7 @@ export default function Layout({ children, ...extraMeta }) {
                         </Box>
                     </VStack>
                 </Center>
+
             </main>
         </div >
     )
