@@ -1,4 +1,4 @@
-import { Box, Button, Input, Flex, Stack, IconButton } from '@chakra-ui/react'
+import { Box, Button, Input, Flex, Stack, IconButton, Text } from '@chakra-ui/react'
 import Navitem from './NavItem';
 
 import { useRef } from 'react'
@@ -15,6 +15,7 @@ import {
 import { VscTerminalBash } from "react-icons/vsc"
 import { SiGnubash } from "react-icons/si"
 import { SunIcon, MoonIcon } from '@chakra-ui/icons'
+import { motion } from 'framer-motion'
 
 // Navigation bar component
 const Navbar = () => {
@@ -27,6 +28,7 @@ const Navbar = () => {
             align="center"
             as="nav"
             w="100%"
+            zIndex={2}
         >
             {/* flex layout contents in navigation bar container */}
             <Flex
@@ -46,11 +48,10 @@ const Navbar = () => {
                     width={{ base: 'full', md: 'auto' }}
                     spacing={5}
                     flexGrow={1}
+                    zIndex={2}
                 >
-                    <DrawerExample></DrawerExample>
-                    <Navitem>whoami</Navitem>
-                    <Navitem>ll projects/</Navitem>
-                    <Navitem>cd posts/</Navitem>
+                    <Navitem>cd /home</Navitem>
+                    <Navitem>cd /posts</Navitem>
                 </Stack>
             </Flex>
         </Box>
@@ -64,33 +65,38 @@ function DrawerExample() {
     return (
         <>
             <IconButton
+                as={motion.div}
                 ref={btnRef}
-                colorScheme='teal'
+                colorScheme='gray'
                 icon={<SiGnubash/>}
                 variant="solid"
                 onClick={onOpen}
+                whileHover={{ scale: 1.20 }}
             ></IconButton>
             <Drawer
                 isOpen={isOpen}
-                placement='right'
+                placement='left'
                 onClose={onClose}
                 finalFocusRef={btnRef}
             >
                 <DrawerOverlay />
-                <DrawerContent>
-                    <DrawerCloseButton />
-                    <DrawerHeader>Create your account</DrawerHeader>
-
-                    <DrawerBody>
-                        <Input placeholder='Type here...' />
-                    </DrawerBody>
-
-                    <DrawerFooter>
-                        <Button variant='outline' mr={3} onClick={onClose}>
-                            Cancel
-                        </Button>
-                        <Button colorScheme='blue'>Save</Button>
-                    </DrawerFooter>
+                <DrawerContent
+                  bg='orange.100'
+                >
+                  <DrawerCloseButton />
+                  <DrawerHeader
+                    fontFamily="gohu"
+                  >
+                    Contents 
+                  </DrawerHeader>
+                  <DrawerBody>
+                    <Text fontfamily="gohu">
+                      .<br/>
+                      ├── page0.html<br/>
+                      ├── page1.html<br/>
+                      └── page2.html<br/>
+                    </Text>
+                  </DrawerBody>
                 </DrawerContent>
             </Drawer>
         </>

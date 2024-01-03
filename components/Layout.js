@@ -62,14 +62,13 @@ export default function Layout({ children, ...extraMeta }) {
             <main>
                 <Center>
                     <VStack width="90%">
-                        <Navbar></Navbar>
                         <Container
                             width="20%"
                             height="23%"
                             display="inline-block"
                             borderStyle="solid"
                             borderRadius="full"
-                            mt={50}
+                            pt="100px"
                         >
                             <Image
                                 src="profilePic.jpeg"
@@ -93,7 +92,7 @@ export default function Layout({ children, ...extraMeta }) {
                             textAlign="center"
                         >
                             {'Ph.D at Georgia Intitute of Technology - '}
-                            <Link href="https://gtcad.gatech.edu/" target="_blank" rel="noopener noreferrer">
+                            <Link color="red.300" href="https://gtcad.gatech.edu/" target="_blank" rel="noopener noreferrer">
                                 {'GTCAD Lab'}
                             </Link>
 
@@ -141,7 +140,6 @@ export default function Layout({ children, ...extraMeta }) {
                                 </Link>
                             </Container>
                         </HStack>
-                        <Divider pt={5} borderColor="black" />
                         <Container
                             maxW="container.xl"
                             width="100%"
@@ -149,14 +147,13 @@ export default function Layout({ children, ...extraMeta }) {
                         >
                             {children}
                         </Container>
-                        <Divider pt={5} borderColor="black" />
                         <Heading
                             fontSize="30px"
                             fontFamily="consolas"
                         >
                             ls skills/
                         </Heading>
-                        <Container pb={5} maxW="container.xl" width="100%">
+                        <Container pb={5} maxW="container.xl" width="100%" fontFamily="consolas">
                             <TableContainer>
                                 <Table variant='simple'>
                                     <Thead>
@@ -232,7 +229,6 @@ export default function Layout({ children, ...extraMeta }) {
                                 </Table>
                             </TableContainer>
                         </Container>
-                        <Divider pb={3} />
                         <Box align="center" opacity={0.4} fontSize="sm" pb={3}>
                             &copy; {new Date().getFullYear()} Amaan Rahman. All Rights Reserved.
                         </Box>

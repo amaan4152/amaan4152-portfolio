@@ -61,7 +61,7 @@ export default function Home() {
             whoami
           </Heading>
           <Text>
-            1st year Ph.D student at the Georgia Institute of Technology in the <Link color="teal.300" href="https://gtcad.gatech.edu/" target="_blank" rel="noopener noreferrer">GTCAD</Link>. Currently studying Back-Side Power Delivery Network (BS-PDN) designs, analyses, and EDA flow for deep submicron technologies utilizing Synopsys and RedHawk tool suites. Interested in investigating hardware accelerator low-power designs. 
+            1st year Ph.D student at the Georgia Institute of Technology in the <Link color="red.300" href="https://gtcad.gatech.edu/" target="_blank" rel="noopener noreferrer">GTCAD</Link>. Currently studying Back-Side Power Delivery Network (BS-PDN) designs, analyses, and EDA flow for deep submicron technologies utilizing Synopsys and RedHawk tool suites. Interested in investigating hardware accelerator low-power designs. 
           </Text>
           <Heading
             fontSize="30px"
