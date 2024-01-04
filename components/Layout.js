@@ -8,15 +8,20 @@ import {
     Box,
     Button,
     Input,
+    Card,
+    CardBody,
     Center,
     Container,
     Divider,
     VStack,
+    Stack,
     Image,
     HStack,
     Heading,
     Icon,
     Link,
+    LinkBox,
+    LinkOverlay,
     List,
     ListItem,
     ListIcon,
@@ -32,13 +37,40 @@ import {
     UnorderedList
 } from '@chakra-ui/react'
 import { motion } from 'framer-motion'
-import { GoMail } from 'react-icons/go'
+import { GoMail, GoDot } from 'react-icons/go'
 import { FaLinkedin } from 'react-icons/fa'
 import { TbLogicNot } from 'react-icons/tb'
 import { MdOutlineDesignServices, } from 'react-icons/md'
 import { SiCompilerexplorer, SiGithub } from 'react-icons/si'
 
 
+
+const ContactBadge = ({ href, icon }) => {
+    return (
+        <Container
+            as={motion.div}
+            pr={3}
+            whileHover={{ scale: 1.15 }}
+        >
+            <Link
+                href={href}
+                borderRadius="full"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <Icon as={icon} boxSize={6} />
+            </Link>
+        </Container>
+    )
+}
+
+const ContactTray = ({ children }) => {
+    return (
+        <HStack>
+            {children}
+        </HStack>
+    )
+}
 
 // Layout framwork for pages in portfolio
 // ref: https://www.freecodecamp.org/news/how-to-build-a-portfolio-site-with-nextjs-tailwindcss/
@@ -106,49 +138,12 @@ export default function Layout({ children, ...extraMeta }) {
                             {'B.E. in EE at The Cooper Union 2023'}
 
                         </Container>
-                        <HStack>
-                            <Container
-                                as={motion.div}
-                                pr={3}
-                                whileHover={{ scale: 1.15 }}
-                            >
-                                <Link
-                                    href="https://github.com/amaan4152"
-                                    borderRadius="full"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    <Icon as={SiGithub} boxSize={6} />
-                                </Link>
-                            </Container>
-                            <Container
-                                as={motion.div}
-                                whileHover={{ scale: 1.15 }}
-                            >
-                                <Link
-                                    href="mailto: amaan.rahman@gatech.edu"
-                                    borderRadius="full"
-                                    border="hidden"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    <Icon as={GoMail} boxSize={8} />
-                                </Link>
-                            </Container>
-                            <Container
-                                as={motion.div}
-                                whileHover={{ scale: 1.15 }}
-                            >
-                                <Link
-                                    href="https://www.linkedin.com/in/amaan-rahman-340a3a181"
-                                    borderRadius="full"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    <Icon as={FaLinkedin} boxSize={7} />
-                                </Link>
-                            </Container>
-                        </HStack>
+                        <ContactTray>
+                            <ContactBadge href="https://github.com/amaan4152" icon={SiGithub} />
+                            <ContactBadge href="mailto: amaan.rahman@gatech.edu" icon={GoMail} />
+                            <ContactBadge href="https://www.linkedin.com/in/amaan-rahman-340a3a181" icon={FaLinkedin} />
+                        </ContactTray>
+
                         <Container
                             maxW="container.xl"
                             width="100%"
@@ -198,7 +193,7 @@ export default function Layout({ children, ...extraMeta }) {
                                             <Td>C++</Td>
                                             <Td>Tensorflow</Td>
                                             <Td>
-                                                <Text as='u'>Synopsis EDA Tools:</Text>
+                                                <Text as='i'>Synopsis EDA Tools:</Text>
                                                 <br />
                                                 <br />
                                                 <List spacing={5}>
@@ -244,13 +239,23 @@ export default function Layout({ children, ...extraMeta }) {
                                         </Tr>
                                         <Tr>
                                             <Td>JavaScript</Td>
-                                            <Td>-</Td>
+                                            <Td textAlign='center'><Icon as={GoDot} /></Td>
                                             <Td>Unix/Linux Systems</Td>
                                         </Tr>
                                         <Tr>
                                             <Td>x86 Assembly</Td>
-                                            <Td>-</Td>
-                                            <Td>-</Td>
+                                            <Td textAlign='center'><Icon as={GoDot} /></Td>
+                                            <Td textAlign='center'><Icon as={GoDot} /></Td>
+                                        </Tr>
+                                        <Tr>
+                                            <Td>Docker</Td>
+                                            <Td textAlign='center'><Icon as={GoDot} /></Td>
+                                            <Td textAlign='center'><Icon as={GoDot} /></Td>
+                                        </Tr>
+                                        <Tr>
+                                            <Td>Git</Td>
+                                            <Td textAlign='center'><Icon as={GoDot} /></Td>
+                                            <Td textAlign='center'><Icon as={GoDot} /></Td>
                                         </Tr>
                                     </Tbody>
                                 </Table>

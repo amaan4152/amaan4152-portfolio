@@ -37,6 +37,41 @@ const ProjectCard = ({ href, title, img, imgAlt, children }) => {
                 {title}
               </LinkOverlay>
             </Heading>
+            {children}
+          </CardBody>
+        </Stack>
+      </Card>
+    </LinkBox>
+  )
+}
+
+const PublicationCard = ({ href, width, img, imgAlt, title, children }) => {
+  return (
+    <LinkBox as='article' maxW='xl' p='5'>
+      <Card
+        as={motion.div}
+        direction={{ base: 'column', sm: 'row' }}
+        w="700px"
+        h="100%"
+        shadow="xl"
+        overflow='hidden'
+        whileHover={{ scale: 1.03 }}
+        variant='outline'
+        ml="-125px"
+      >
+        <Image
+          src={img}
+          alt={imgAlt}
+          objectFit='cover'
+          maxW={{ base: '100%', sm: '200px' }}
+        />
+        <Stack>
+          <CardBody bg="red.100" fontFamily="consolas" maxW={width}>
+            <Heading size='md' fontFamily="consolas">
+              <LinkOverlay href={href} target="_blank" rel="noopener noreferrer">
+                <Text as='i' wordWrap="normal">{title}</Text>
+              </LinkOverlay>
+            </Heading>
             <Text fontSize="16px">
               {children}
             </Text>
@@ -60,8 +95,40 @@ export default function Home() {
             whoami
           </Heading>
           <Text>
-            1st year Ph.D student at the Georgia Institute of Technology in the <Link color="red.300" href="https://gtcad.gatech.edu/" target="_blank" rel="noopener noreferrer">GTCAD</Link>. Concentrating in VLSI and Computer Engineering, and specializing in EDA for digital design. Currently studying Back-Side Power Delivery Network (BS-PDN) design, analyses, and EDA flow with micron technologies utilizing Synopsys and RedHawk softwares for system-level studies. Strongly interested in researching low-power machine learning accelerator architectures for 3D design, and novel EDA methodologies for improving PPA and IR-drop.
+            1st year Ph.D EE student at the Georgia Institute of Technology in the <Link color="red.300" href="https://gtcad.gatech.edu/" target="_blank" rel="noopener noreferrer">GTCAD</Link> lab under the supervision of Dr. Sung-Kyu Lim. Concentrating in VLSI and Computer Engineering, and specializing in EDA for digital design. Currently studying Back-Side Power Delivery Network (BS-PDN) design, analyses, and EDA flow with 3nm technology for system-level effects on GPUs and CPUs. Strongly interested in researching low-power machine learning accelerator architectures for 3D IC design, and novel EDA methodologies for improving PPA and IR-drop.
           </Text>
+          <Heading
+            fontSize="30px"
+            fontFamily="consolas"
+          >
+            ls publications/
+          </Heading>
+          <PublicationCard
+            href="https://dl.acm.org/doi/abs/10.1145/3544549.3583950"
+            img="chi_conf.png"
+            imgAlt="CHI 2023 Conference Image"
+            title="Towards a Markerless 3D Pose Estimation Tool"
+            width="800px"
+          >
+            <Text fontSize='16px'>
+              <Text as='b'>Amaan Rahman</Text>, Mili Shah, Ya-Shian Li-Baboud, Ann Virts
+            </Text>
+            <br />
+            <Text fontSize='12px'>
+              Presented at the SIGCHI Conference in Hamburg, Germany.
+            </Text>
+          </PublicationCard>
+          <PublicationCard
+            href="https://www.mdpi.com/1424-8220/23/12/5604"
+            img="https://cdnsecakmi.kaltura.com/p/684682/sp/68468200/thumbnail/entry_id/0_ie3f3yr7/width/1280"
+            imgAlt="NIST Exoskeleton Research Image"
+            title="Evaluation Methods and Measurement Challenges for Industrial Exoskeletons"
+            width="800px"
+          >
+            <Text fontSize='16px'>
+              Li-Baboud, Ya-Shian, Ann Virts, Roger Bostelman, Soocheol Yoon, <Text as='b'>Amaan Rahman</Text>, Lucia Rhode, Nishat Ahmed, and Mili Shah
+            </Text>
+          </PublicationCard>
           <Heading
             fontSize="30px"
             fontFamily="consolas"
