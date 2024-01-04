@@ -15,7 +15,7 @@ import {
 } from "@chakra-ui/react"
 import { motion } from 'framer-motion'
 
-const ProjectCard = ({href, title, img, imgAlt, children}) => {
+const ProjectCard = ({ href, title, img, imgAlt, children }) => {
   return (
     <LinkBox as='article' maxW='sm' p='5'>
       <Card
@@ -28,7 +28,6 @@ const ProjectCard = ({href, title, img, imgAlt, children}) => {
       >
         <Image
           src={img}
-          pt="5"
           alt={imgAlt}
         />
         <Stack>
@@ -61,7 +60,7 @@ export default function Home() {
             whoami
           </Heading>
           <Text>
-            1st year Ph.D student at the Georgia Institute of Technology in the <Link color="red.300" href="https://gtcad.gatech.edu/" target="_blank" rel="noopener noreferrer">GTCAD</Link>. Currently studying Back-Side Power Delivery Network (BS-PDN) designs, analyses, and EDA flow for deep submicron technologies utilizing Synopsys and RedHawk tool suites. Interested in investigating hardware accelerator low-power designs. 
+            1st year Ph.D student at the Georgia Institute of Technology in the <Link color="red.300" href="https://gtcad.gatech.edu/" target="_blank" rel="noopener noreferrer">GTCAD</Link>. Concentrating in VLSI and Computer Engineering, and specializing in EDA for digital design. Currently studying Back-Side Power Delivery Network (BS-PDN), analyses, and EDA flow with deep submicron technologies utilizing Synopsys and RedHawk softwares for system-level studies. Strongly interested in researching low-power machine learning accelerator architectures for 3D design, and novel EDA methodologies for improving PPA and IR-drop.
           </Text>
           <Heading
             fontSize="30px"
@@ -69,7 +68,7 @@ export default function Home() {
             pt={5}
             pb={2}
           >
-            ls projects/
+            ls showcase/
           </Heading>
 
           <HStack maxW="container.xl" width="100%">

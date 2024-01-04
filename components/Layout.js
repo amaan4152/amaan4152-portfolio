@@ -17,6 +17,9 @@ import {
     Heading,
     Icon,
     Link,
+    List,
+    ListItem,
+    ListIcon,
     TableContainer,
     Table,
     Thead,
@@ -25,11 +28,15 @@ import {
     Td,
     Th,
     Text,
-    Flex
+    Flex,
+    UnorderedList
 } from '@chakra-ui/react'
 import { motion } from 'framer-motion'
-import { GoMarkGithub, GoMail } from 'react-icons/go'
+import { GoMail } from 'react-icons/go'
 import { FaLinkedin } from 'react-icons/fa'
+import { TbLogicNot } from 'react-icons/tb'
+import { MdOutlineDesignServices, } from 'react-icons/md'
+import { SiCompilerexplorer, SiGithub } from 'react-icons/si'
 
 
 
@@ -63,15 +70,15 @@ export default function Layout({ children, ...extraMeta }) {
                 <Center>
                     <VStack width="90%">
                         <Container
-                            width="20%"
-                            height="23%"
+                            width="15%"
+                            height="25%"
                             display="inline-block"
                             borderStyle="solid"
                             borderRadius="full"
                             pt="100px"
                         >
                             <Image
-                                src="profilePic.jpeg"
+                                src="webpage_pfp.jpg"
                                 borderRadius='full'
                                 width="100%"
                                 height="100%"
@@ -109,7 +116,7 @@ export default function Layout({ children, ...extraMeta }) {
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >
-                                    <Icon as={GoMarkGithub} boxSize={6} />
+                                    <Icon as={SiGithub} boxSize={6} />
                                 </Link>
                             </Container>
                             <Container
@@ -186,44 +193,62 @@ export default function Layout({ children, ...extraMeta }) {
                                             <Td>Cadence Virtuoso</Td>
                                         </Tr>
                                         <Tr>
-                                            <Td>MATLAB</Td>
-                                            <Td>Tensorflow</Td>
-                                            <Td>Synopsis Design Compiler</Td>
-                                        </Tr>
-                                        <Tr>
                                             <Td>C++</Td>
-                                            <Td>OpenCV</Td>
-                                            <Td>Synopsys IC Compiler II</Td>
+                                            <Td>Tensorflow</Td>
+                                            <Td>
+                                                <Text as='u'>Synopsis EDA Tools:</Text>
+                                                <br />
+                                                <br />
+                                                <List spacing={5}>
+                                                    <ListItem>
+                                                        <ListIcon as={MdOutlineDesignServices} color='red.300' />
+                                                        Design Compiler
+                                                    </ListItem>
+                                                    <ListItem>
+                                                        <ListIcon as={TbLogicNot} color='red.300' />
+                                                        IC Compiler II
+                                                    </ListItem>
+                                                    <ListItem>
+                                                        <ListIcon as={SiCompilerexplorer} color='red.300' />
+                                                        Library Manager/Compiler
+                                                    </ListItem>
+                                                </List>
+                                            </Td>
                                         </Tr>
                                         <Tr>
                                             <Td>C</Td>
+                                            <Td>OpenCV</Td>
+                                            <Td>ANSYS RedHawk</Td>
+                                        </Tr>
+                                        <Tr>
+                                            <Td>Perl</Td>
                                             <Td>Pandas</Td>
                                             <Td>Verilog/SystemVerilog HDL</Td>
                                         </Tr>
                                         <Tr>
-                                            <Td>MySQL</Td>
+                                            <Td>Bash</Td>
                                             <Td>Numpy</Td>
-                                            <Td>Tcl</Td>
-                                        </Tr>
-                                        <Tr>
-                                            <Td>JavaScript</Td>
-                                            <Td>MATLAB Communication Toolbox</Td>
                                             <Td>Vivado Design Suite</Td>
                                         </Tr>
                                         <Tr>
-                                            <Td>Bash</Td>
-                                            <Td>MATLAB Instrumentation Toolbox</Td>
+                                            <Td>Tcl</Td>
+                                            <Td>MATLAB Communication Toolbox</Td>
                                             <Td>LTSpice</Td>
+                                        </Tr>
+                                        <Tr>
+                                            <Td>MATLAB</Td>
+                                            <Td>MATLAB Instrumentation Toolbox</Td>
+                                            <Td>Zynq 7000 ZedBoard</Td>
+                                        </Tr>
+                                        <Tr>
+                                            <Td>JavaScript</Td>
+                                            <Td>-</Td>
+                                            <Td>Unix/Linux Systems</Td>
                                         </Tr>
                                         <Tr>
                                             <Td>x86 Assembly</Td>
                                             <Td>-</Td>
-                                            <Td>Zynq 7000 ZedBoard</Td>
-                                        </Tr>
-                                        <Tr>
                                             <Td>-</Td>
-                                            <Td>-</Td>
-                                            <Td>Unix/Linux Systems</Td>
                                         </Tr>
                                     </Tbody>
                                 </Table>
