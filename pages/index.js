@@ -60,7 +60,7 @@ export default function Home() {
             whoami
           </Heading>
           <Text>
-            1st year Ph.D student at the Georgia Institute of Technology in the <Link color="red.300" href="https://gtcad.gatech.edu/" target="_blank" rel="noopener noreferrer">GTCAD</Link>. Concentrating in VLSI and Computer Engineering, and specializing in EDA for digital design. Currently studying Back-Side Power Delivery Network (BS-PDN), analyses, and EDA flow with deep submicron technologies utilizing Synopsys and RedHawk softwares for system-level studies. Strongly interested in researching low-power machine learning accelerator architectures for 3D design, and novel EDA methodologies for improving PPA and IR-drop.
+            1st year Ph.D student at the Georgia Institute of Technology in the <Link color="red.300" href="https://gtcad.gatech.edu/" target="_blank" rel="noopener noreferrer">GTCAD</Link>. Concentrating in VLSI and Computer Engineering, and specializing in EDA for digital design. Currently studying Back-Side Power Delivery Network (BS-PDN) design, analyses, and EDA flow with micron technologies utilizing Synopsys and RedHawk softwares for system-level studies. Strongly interested in researching low-power machine learning accelerator architectures for 3D design, and novel EDA methodologies for improving PPA and IR-drop.
           </Text>
           <Heading
             fontSize="30px"
