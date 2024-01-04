@@ -102,7 +102,7 @@ export default function Home() {
                 img="RepresentativeImage.jpg"
                 imgAlt="Computer Animation Research Poster Pic"
               >
-                Utilized 2D human pose estimation algorithm, <Link color="teal.300" href="https://github.com/CMU-Perceptual-Computing-Lab/openpose">Openpose</Link>, to triangulate 3D positional information with stereophotogrammatry in real-time. Applied research to computer animations to work on low-cost alternative to body tracking using 2 RGB cameras.
+                Utilized 2D human pose estimation algorithm, <Link color="red.300" href="https://github.com/CMU-Perceptual-Computing-Lab/openpose">Openpose</Link>, to triangulate 3D positional information with stereophotogrammatry in real-time. Applied research to computer animations to work on low-cost alternative to body tracking using 2 RGB cameras.
               </ProjectCard>
               <ProjectCard
                 href="https://github.com/amaan4152/ECE472-DeepLearning"
