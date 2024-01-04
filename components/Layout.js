@@ -124,7 +124,7 @@ export default function Layout({ children, ...extraMeta }) {
                                 whileHover={{ scale: 1.15 }}
                             >
                                 <Link
-                                    href="mailto: amaan.rahman@cooper.edu"
+                                    href="mailto: amaan.rahman@gatech.edu"
                                     borderRadius="full"
                                     border="hidden"
                                     target="_blank"
