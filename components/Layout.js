@@ -98,10 +98,12 @@ export default function Layout({ children, ...extraMeta }) {
                             fontSize="16px"
                             textAlign="center"
                         >
-                            {'Ph.D at Georgia Intitute of Technology - '}
+                            {'Ph.D in EE at Georgia Intitute of Technology - '}
                             <Link color="red.300" href="https://gtcad.gatech.edu/" target="_blank" rel="noopener noreferrer">
                                 {'GTCAD Lab'}
                             </Link>
+                            <br />
+                            {'B.E. in EE at The Cooper Union 2023'}
 
                         </Container>
                         <HStack>
